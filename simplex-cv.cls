@@ -188,6 +188,14 @@
     \parbox[t][][t]{\dimexpr.98\textwidth-\sidelen}{{\bfseries#1} $\cdotp$\ #2 $\cdotp$\ #3}\par
 }
 
+
+% Usage: \xpshorter{POSITION}{INSTITUTION/LOCATION}{DATE}
+\newcommand{\xpshorter}[3]{%
+    \parbox[t][][t]{\sidelen}{\MakeLowercase{\scshape\small#3}}%
+    \parbox[t][][t]{\dimexpr.98\textwidth-\sidelen}{{\bfseries#1} $\cdotp$\ #2}\par
+}
+
+
 % Usage: \skill{SKILL}{DESCRIPTION}
 \newcommand{\skill}[2]{%
     \parbox[t][][t]{\sidelen}{\MakeLowercase{\scshape\small#1}}%
