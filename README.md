@@ -1,6 +1,6 @@
-## ```simplex-cv```
+## simplex-cv
 
-> simplex (Latin, adj.): simple plain.
+> simplex (Latin, adj.): simple, plain.
 
 
-```simplex-cv``` is a simple, plain CV template.
+```simplex-cv``` is a simple, clean CV template.

@@ -43,7 +43,7 @@
 %% Setup + Class options
 %% ----------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{simplex-cv}[2019/01/12 v1 Simplex Curriculum Vitae Class]
+\ProvidesClass{simplex-cv}[2019/01/16 v1 Simplex Curriculum Vitae Class]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 \LoadClass{article}
@@ -75,7 +75,7 @@
 % Removing paragraph indentation, reducing paragraph skip and linespread
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1pt}
-\linespread{0.97}
+\linespread{1}
 
 % List format
 \setlist[enumerate,1]{label=$\cdotp$,noitemsep,topsep=-1ex,leftmargin=1.7ex}
@@ -88,7 +88,7 @@
             \rule{\textwidth}{0.4pt}\vspace{-0.9em}]
             
 % Page configuration
-\geometry{margin=10mm, top=15mm, bottom=6mm, heightrounded}
+\geometry{margin=12mm, top=10mm, bottom=6mm, heightrounded}
 
 % Creating a boolean to define whether or not to use a separator
 \newbool{usesep}
