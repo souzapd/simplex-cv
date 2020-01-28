@@ -58,6 +58,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{fontawesome}
 \RequirePackage{etoolbox}
+\RequirePackage{setspace}
 \RequirePackage[scaled=0.9,sfdefault]{FiraSans}
 
 
@@ -78,13 +79,13 @@
 
 % -- List format
 \setlist[enumerate,1]{label=$\cdotp$,noitemsep,topsep=-1ex,leftmargin=1.7ex}
-\AfterEndEnvironment{enumerate}{\vskip-2.4\lastskip}
+\AfterEndEnvironment{enumerate}{\vskip-2.25\lastskip}
 
 % -- Redefining section distances, adding a ruler
 \titlespacing*{\section}{0mm}{4pt}{3mm}
 \titleformat{\section}[hang]%
             {\large\bfseries}{}{0pt}{}%
-            [\vspace{-.72\baselineskip}%
+            [\vspace{-.75\baselineskip}%
             \rule{\textwidth}{0.4pt}\vspace{-0.9em}]
             
 % -- Page configuration
@@ -178,8 +179,7 @@
     \parbox[t][][t]{\dimexpr.98\textwidth-\sidelen}{%
         \vspace{-6pt}
         \begin{enumerate}#5\end{enumerate}
-        }%
-    \par
+        }
 }
 
 % -- Args: \xpshort{position}{institution}{location}{date}
