@@ -121,51 +121,53 @@
             \scshape\MakeLowercase{\@profession}}\par
         }%
     % -- location: city, country, etc.
-    \ifundef{\@address}{}{\@address}\par% 
-    {%
-        % -- phone number
-        \ifundef{\@phone}{}{%
-            \faMobile\space\@phone%
-            \setbool{usesep}{false}%
+        \ifundef{\@address}{}{\@address}\par% 
+        {%
+            % -- phone number
+            \ifundef{\@phone}{}{%
+                \faMobile\space\@phone%
+                \setbool{usesep}{false}%
+            }%
+            % -- email address
+            \ifundef{\@email}{}{%
+                \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
+                \faEnvelopeO\space\@email%
+            }%
+            % -- Skype
+            \ifundef{\@skype}{}{%
+                \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
+                \faSkype\space\@skype%
+            }%
+            % -- LinkedIn
+            \ifundef{\@linkedin}{}{%
+                \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
+                \faLinkedinSquare\space%
+                \href{https://linkedin.com/in/\@linkedin}{in/\@linkedin}%
+            }%
+            % -- Github repository
+            \ifundef{\@github}{}{%
+                \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
+                \faGithub\space%
+                \href{https://github.com/\@github}{\@github}%
+            }%
+            % -- Github page
+            \ifundef{\@ghpage}{}{%
+                \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
+                \faGithub\space%
+                \href{https://\@ghpage}{\@ghpage}%
+            }%
+            % -- External link
+            \ifundef{\@wpageid}{}{%
+                \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
+                \faLink\space%
+                \href{https://\@wpagelink}{\@wpageid}%
+            }%
         }%
-        % -- email address
-        \ifundef{\@email}{}{%
-            \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
-            \faEnvelopeO\space\@email%
-        }%
-        % -- Skype
-        \ifundef{\@skype}{}{%
-            \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
-            \faSkype\space\@skype%
-        }%
-        % -- LinkedIn
-        \ifundef{\@linkedin}{}{%
-            \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
-            \faLinkedinSquare\space%
-            \href{https://linkedin.com/in/\@linkedin}{in/\@linkedin}%
-        }%
-        % -- Github repository
-        \ifundef{\@github}{}{%
-            \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
-            \faGithub\space%
-            \href{https://github.com/\@github}{\@github}%
-        }%
-        % -- Github page
-        \ifundef{\@ghpage}{}{%
-            \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
-            \faGithub\space%
-            \href{https://\@ghpage}{\@ghpage}%
-        }%
-        % -- External link
-        \ifundef{\@wpageid}{}{%
-            \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
-            \faLink\space%
-            \href{https://\@wpagelink}{\@wpageid}%
-        }%
-    }%
-    \par%
-    \vspace{-.2\baselineskip}\rule{\textwidth}{0.4pt}\par%
-    \@aboutme
+        \par%
+        \ifundef{\@aboutme}{}{%    
+            \vspace{-.2\baselineskip}\rule{\textwidth}{0.4pt}\par%
+            \@aboutme
+        }
     }
 }
 
