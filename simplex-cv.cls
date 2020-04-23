@@ -59,7 +59,9 @@
 \RequirePackage{fontawesome}
 \RequirePackage{etoolbox}
 \RequirePackage{setspace}
-\RequirePackage[scaled=0.9,sfdefault]{FiraSans}
+\RequirePackage[scaled=0.94,default,osf]{sourcesanspro}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
 
 
 % -- -------------------------------------------------------------------------
