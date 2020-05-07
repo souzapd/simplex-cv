@@ -59,7 +59,7 @@
 \RequirePackage{fontawesome}
 \RequirePackage{etoolbox}
 \RequirePackage{setspace}
-\RequirePackage[scaled=0.94,default,osf]{sourcesanspro}
+\RequirePackage[scaled=0.94,default,semibold,osf]{sourcesanspro}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 
@@ -67,9 +67,6 @@
 % -- -------------------------------------------------------------------------
 % -- Layout options
 % -- -------------------------------------------------------------------------
-% -- Changing font weight for the bold font.
-\def\bfseries@sf{sb}
-
 % -- Creates and sets the length for the \xpfull, \xpshort macro
 \newlength{\sidelen}
 \setlength{\sidelen}{35mm}
@@ -123,53 +120,51 @@
             \scshape\MakeLowercase{\@profession}}\par
         }%
     % -- location: city, country, etc.
-        \ifundef{\@address}{}{\@address}\par% 
-        {%
-            % -- phone number
-            \ifundef{\@phone}{}{%
-                \faMobile\space\@phone%
-                \setbool{usesep}{false}%
-            }%
-            % -- email address
-            \ifundef{\@email}{}{%
-                \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
-                \faEnvelopeO\space\@email%
-            }%
-            % -- Skype
-            \ifundef{\@skype}{}{%
-                \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
-                \faSkype\space\@skype%
-            }%
-            % -- LinkedIn
-            \ifundef{\@linkedin}{}{%
-                \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
-                \faLinkedinSquare\space%
-                \href{https://linkedin.com/in/\@linkedin}{in/\@linkedin}%
-            }%
-            % -- Github repository
-            \ifundef{\@github}{}{%
-                \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
-                \faGithub\space%
-                \href{https://github.com/\@github}{\@github}%
-            }%
-            % -- Github page
-            \ifundef{\@ghpage}{}{%
-                \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
-                \faGithub\space%
-                \href{https://\@ghpage}{\@ghpage}%
-            }%
-            % -- External link
-            \ifundef{\@wpageid}{}{%
-                \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
-                \faLink\space%
-                \href{https://\@wpagelink}{\@wpageid}%
-            }%
+    \ifundef{\@address}{}{\@address}\par% 
+    {%
+        % -- phone number
+        \ifundef{\@phone}{}{%
+            \faMobile\space\@phone%
+            \setbool{usesep}{false}%
         }%
-        \par%
-        \ifundef{\@aboutme}{}{%    
-            \vspace{-.2\baselineskip}\rule{\textwidth}{0.4pt}\par%
-            \@aboutme
-        }
+        % -- email address
+        \ifundef{\@email}{}{%
+            \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
+            \faEnvelopeO\space\@email%
+        }%
+        % -- Skype
+        \ifundef{\@skype}{}{%
+            \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
+            \faSkype\space\@skype%
+        }%
+        % -- LinkedIn
+        \ifundef{\@linkedin}{}{%
+            \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
+            \faLinkedinSquare\space%
+            \href{https://linkedin.com/in/\@linkedin}{in/\@linkedin}%
+        }%
+        % -- Github repository
+        \ifundef{\@github}{}{%
+            \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
+            \faGithub\space%
+            \href{https://github.com/\@github}{\@github}%
+        }%
+        % -- Github page
+        \ifundef{\@ghpage}{}{%
+            \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
+            \faGithub\space%
+            \href{https://\@ghpage}{\@ghpage}%
+        }%
+        % -- External link
+        \ifundef{\@wpageid}{}{%
+            \ifbool{usesep}{\setbool{usesep}{false}}{\enspace$\cdotp$\enspace}%
+            \faLink\space%
+            \href{https://\@wpagelink}{\@wpageid}%
+        }%
+    }%
+    \par%
+    \vspace{-.2\baselineskip}\rule{\textwidth}{0.4pt}\par%
+    \@aboutme
     }
 }
 
