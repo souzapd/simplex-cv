@@ -173,13 +173,12 @@
 % -- Note that description already uses enumerate environment. 
 \newcommand{\xpfull}[5]{%
     \parbox[t][][t]{\sidelen}{\MakeLowercase{\scshape\small#4}}%
-    \parbox[t][][t]{\dimexpr.98\textwidth-\sidelen}{{\bfseries#1} $\cdotp$\ #2 $\cdotp$\ #3}\linebreak
-    \parbox[t][][t]{\sidelen}{~}%
     \parbox[t][][t]{\dimexpr.98\textwidth-\sidelen}{%
-        \vspace{-6pt}
-        \begin{enumerate}#5\end{enumerate}
-        }
+        {\bfseries#1} $\cdotp$\ #2 $\cdotp$\ #3
+        \begin{enumerate}#5\end{enumerate} 
+    }
 }
+
 
 % -- Args: \xpshort{position}{institution}{location}{date}
 \newcommand{\xpshort}[4]{%
