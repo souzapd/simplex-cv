@@ -114,7 +114,7 @@
 \newcommand{\makeheader}{%
     {%
         \centering 
-        {\Huge\scshape\@name}\par
+        {\huge\scshape\MakeLowercase{\@name}}\par
         {
             \ifundef{\@profession}{\par}{%
             \scshape\MakeLowercase{\@profession}}\par
